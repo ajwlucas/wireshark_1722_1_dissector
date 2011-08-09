@@ -179,22 +179,12 @@ static void dissect_1722(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree)
             {
                 if (dissector_try_uint(avb_dissector_table, 0x7C, tvb, pinfo, tree))
                 {
-                    // fprintf(stderr, "subtype: %d\n", subtype);
                     return;
                 }
             }
             default:
                 break;
         }
-                
-        /*
-        if (subtype == 0x7A)
-        {
-            
-            // dissector_try_uint(avb_dissector_table, 0x7A, tvb, pinfo, tree);
-            return;
-        }
-        */
         
         proto_tree_add_item(ieee1722_tree, hf_1722_mrfield, tvb, IEEE_1722_VERSION_OFFSET, 1, FALSE);
         proto_tree_add_item(ieee1722_tree, hf_1722_gvfield, tvb, IEEE_1722_VERSION_OFFSET, 1, FALSE);

@@ -56,15 +56,15 @@
 
 /* Bit Field Masks */
 
-#define ADP_MSG_TYPE_MASK            0x0f
-#define ADP_VALID_TIME_MASK          0xf8
-#define ADP_CD_LENGTH_MASK           0x07ff
+#define ADP_MSG_TYPE_MASK                   0x0f
+#define ADP_VALID_TIME_MASK                 0xf8
+#define ADP_CD_LENGTH_MASK                  0x07ff
 
 /* message_type */
 
-#define ADP_ENTITY_AVAILABLE_MESSAGE     0x00
-#define ADP_ENTITY_DEPARTING_MESSAGE     0x01
-#define ADP_ENTITY_DISCOVER_MESSAGE      0x02
+#define ADP_ENTITY_AVAILABLE_MESSAGE        0x00
+#define ADP_ENTITY_DEPARTING_MESSAGE        0x01
+#define ADP_ENTITY_DISCOVER_MESSAGE         0x02
 
 /* entity_capabilities_flags                            */
 #define ADP_AVDECC_IP_BITMASK                0x01
@@ -115,22 +115,22 @@
 
 /* channel_formats flags */
 
-#define ADP_CHAN_FORMAT_MONO						(0x00000001)
-#define ADP_CHAN_FORMAT_2CH						    (0x00000002)
-#define ADP_CHAN_FORMAT_3CH						    (0x00000004)
-#define ADP_CHAN_FORMAT_4CH						    (0x00000008)
-#define ADP_CHAN_FORMAT_5CH						    (0x00000010)
-#define ADP_CHAN_FORMAT_6CH						    (0x00000020)
-#define ADP_CHAN_FORMAT_7CH						    (0x00000040)
-#define ADP_CHAN_FORMAT_8CH						    (0x00000080)
-#define ADP_CHAN_FORMAT_10CH						(0x00000100)
-#define ADP_CHAN_FORMAT_12CH						(0x00000200)
-#define ADP_CHAN_FORMAT_14CH						(0x00000400)
-#define ADP_CHAN_FORMAT_16CH						(0x00000800)
-#define ADP_CHAN_FORMAT_18CH						(0x00001000)
-#define ADP_CHAN_FORMAT_20CH						(0x00002000)
-#define ADP_CHAN_FORMAT_22CH						(0x00004000)
-#define ADP_CHAN_FORMAT_24CH						(0x00008000)
+#define ADP_CHAN_FORMAT_MONO                        (0x00000001)
+#define ADP_CHAN_FORMAT_2CH                         (0x00000002)
+#define ADP_CHAN_FORMAT_3CH                         (0x00000004)
+#define ADP_CHAN_FORMAT_4CH                         (0x00000008)
+#define ADP_CHAN_FORMAT_5CH                         (0x00000010)
+#define ADP_CHAN_FORMAT_6CH                         (0x00000020)
+#define ADP_CHAN_FORMAT_7CH                         (0x00000040)
+#define ADP_CHAN_FORMAT_8CH                         (0x00000080)
+#define ADP_CHAN_FORMAT_10CH                        (0x00000100)
+#define ADP_CHAN_FORMAT_12CH                        (0x00000200)
+#define ADP_CHAN_FORMAT_14CH                        (0x00000400)
+#define ADP_CHAN_FORMAT_16CH                        (0x00000800)
+#define ADP_CHAN_FORMAT_18CH                        (0x00001000)
+#define ADP_CHAN_FORMAT_20CH                        (0x00002000)
+#define ADP_CHAN_FORMAT_22CH                        (0x00004000)
+#define ADP_CHAN_FORMAT_24CH                        (0x00008000)
 
 /******************************************************************************/
 /* 1722.1 ACMP Offsets */
@@ -164,7 +164,7 @@
 #define ACMP_DISCONNECT_TX_RESPONSE         3
 #define ACMP_GET_TX_STATE_COMMAND           4
 #define ACMP_GET_TX_STATE_RESPONSE          5
-#define ACMP_CONNECT_RX_COMMAND	            6
+#define ACMP_CONNECT_RX_COMMAND             6
 #define ACMP_CONNECT_RX_RESPONSE            7
 #define ACMP_DISCONNECT_RX_COMMAND          8
 #define ACMP_DISCONNECT_RX_RESPONSE         9
@@ -175,23 +175,23 @@
 
 /* status_field */
 
-#define ACMP_STATUS_SUCCESS 	                        0
-#define ACMP_STATUS_LISTENER_UNKNOWN_ID 	            1
-#define ACMP_STATUS_TALKER_UNKNOWN_ID 	                2
-#define ACMP_STATUS_TALKER_DEST_MAC_FAIL 	            3
-#define ACMP_STATUS_TALKER_NO_STREAM_INDEX 	            4
-#define ACMP_STATUS_TALKER_NO_BANDWIDTH 	            5
-#define ACMP_STATUS_TALKER_EXCLUSIVE 	                6
-#define ACMP_STATUS_LISTENER_TALKER_TIMEOUT 	        7
-#define ACMP_STATUS_LISTENER_EXCLUSIVE 	                8
-#define ACMP_STATUS_STATE_UNAVAILABLE 	                9
-#define ACMP_STATUS_NOT_CONNECTED 	                    10
-#define ACMP_STATUS_NO_SUCH_CONNECTION 	                11
-#define ACMP_STATUS_COULD_NOT_SEND_MESSAGE 	            12
-#define ACMP_STATUS_LISTENER_DEFAULT_FORMAT_INVALID 	13
-#define ACMP_STATUS_TALKER_DEFAULT_FORMAT_INVALID 	    14
-#define ACMP_STATUS_DEFAULT_SET_DIFFERENT 	            15
-#define ACMP_STATUS_NOT_SUPPORTED 	                    31
+#define ACMP_STATUS_SUCCESS                             0
+#define ACMP_STATUS_LISTENER_UNKNOWN_ID                 1
+#define ACMP_STATUS_TALKER_UNKNOWN_ID                   2
+#define ACMP_STATUS_TALKER_DEST_MAC_FAIL                3
+#define ACMP_STATUS_TALKER_NO_STREAM_INDEX              4
+#define ACMP_STATUS_TALKER_NO_BANDWIDTH                 5
+#define ACMP_STATUS_TALKER_EXCLUSIVE                    6
+#define ACMP_STATUS_LISTENER_TALKER_TIMEOUT             7
+#define ACMP_STATUS_LISTENER_EXCLUSIVE                  8
+#define ACMP_STATUS_STATE_UNAVAILABLE                   9
+#define ACMP_STATUS_NOT_CONNECTED                       10
+#define ACMP_STATUS_NO_SUCH_CONNECTION                  11
+#define ACMP_STATUS_COULD_NOT_SEND_MESSAGE              12
+#define ACMP_STATUS_LISTENER_DEFAULT_FORMAT_INVALID     13
+#define ACMP_STATUS_TALKER_DEFAULT_FORMAT_INVALID       14
+#define ACMP_STATUS_DEFAULT_SET_DIFFERENT               15
+#define ACMP_STATUS_NOT_SUPPORTED                       31
 
 /* ACMP flags                                   */
 #define ACMP_FLAG_CLASS_B_BITMASK               0x0001
@@ -226,23 +226,23 @@ static const value_string acmp_message_type_vals[] = {
 };
 
 static const value_string acmp_status_field_vals[] = {
-	{ACMP_STATUS_SUCCESS, 	                        "SUCCESS"},
-	{ACMP_STATUS_LISTENER_UNKNOWN_ID,	            "LISTENER_UNKNOWN_ID"},
-	{ACMP_STATUS_TALKER_UNKNOWN_ID, 	            "TALKER_UNKNOWN_ID"},
-	{ACMP_STATUS_TALKER_DEST_MAC_FAIL, 	            "TALKER_DEST_MAC_FAIL"},
-	{ACMP_STATUS_TALKER_NO_STREAM_INDEX, 	        "TALKER_NO_STREAM_INDEX"},
-	{ACMP_STATUS_TALKER_NO_BANDWIDTH, 	            "TALKER_NO_BANDWIDTH"},
-	{ACMP_STATUS_TALKER_EXCLUSIVE, 	                "TALKER_EXCLUSIVE"},
-	{ACMP_STATUS_LISTENER_TALKER_TIMEOUT, 	        "LISTENER_TALKER_TIMEOUT"},
-	{ACMP_STATUS_LISTENER_EXCLUSIVE, 	            "LISTENER_EXCLUSIVE"},
-	{ACMP_STATUS_STATE_UNAVAILABLE, 	            "STATE_UNAVAILABLE"},
-	{ACMP_STATUS_NOT_CONNECTED, 	                "NOT_CONNECTED"},
-	{ACMP_STATUS_NO_SUCH_CONNECTION, 	            "NO_SUCH_CONNECTION"},
-	{ACMP_STATUS_COULD_NOT_SEND_MESSAGE, 	        "COULD_NOT_SEND_MESSAGE"},
-	{ACMP_STATUS_LISTENER_DEFAULT_FORMAT_INVALID, 	"LISTENER_DEFAULT_FORMAT_INVALID"},
-	{ACMP_STATUS_TALKER_DEFAULT_FORMAT_INVALID, 	"TALKER_DEFAULT_FORMAT_INVALID"},
-	{ACMP_STATUS_DEFAULT_SET_DIFFERENT, 	        "DEFAULT_SET_DIFFERENT"},
-	{ACMP_STATUS_NOT_SUPPORTED, 	                "NOT_SUPPORTED"},
+    {ACMP_STATUS_SUCCESS,                               "SUCCESS"},
+    {ACMP_STATUS_LISTENER_UNKNOWN_ID,                   "LISTENER_UNKNOWN_ID"},
+    {ACMP_STATUS_TALKER_UNKNOWN_ID,                     "TALKER_UNKNOWN_ID"},
+    {ACMP_STATUS_TALKER_DEST_MAC_FAIL,                  "TALKER_DEST_MAC_FAIL"},
+    {ACMP_STATUS_TALKER_NO_STREAM_INDEX,                "TALKER_NO_STREAM_INDEX"},
+    {ACMP_STATUS_TALKER_NO_BANDWIDTH,                   "TALKER_NO_BANDWIDTH"},
+    {ACMP_STATUS_TALKER_EXCLUSIVE,                      "TALKER_EXCLUSIVE"},
+    {ACMP_STATUS_LISTENER_TALKER_TIMEOUT,               "LISTENER_TALKER_TIMEOUT"},
+    {ACMP_STATUS_LISTENER_EXCLUSIVE,                    "LISTENER_EXCLUSIVE"},
+    {ACMP_STATUS_STATE_UNAVAILABLE,                     "STATE_UNAVAILABLE"},
+    {ACMP_STATUS_NOT_CONNECTED,                         "NOT_CONNECTED"},
+    {ACMP_STATUS_NO_SUCH_CONNECTION,                    "NO_SUCH_CONNECTION"},
+    {ACMP_STATUS_COULD_NOT_SEND_MESSAGE,                "COULD_NOT_SEND_MESSAGE"},
+    {ACMP_STATUS_LISTENER_DEFAULT_FORMAT_INVALID,       "LISTENER_DEFAULT_FORMAT_INVALID"},
+    {ACMP_STATUS_TALKER_DEFAULT_FORMAT_INVALID,         "TALKER_DEFAULT_FORMAT_INVALID"},
+    {ACMP_STATUS_DEFAULT_SET_DIFFERENT,                 "DEFAULT_SET_DIFFERENT"},
+    {ACMP_STATUS_NOT_SUPPORTED,                         "NOT_SUPPORTED"},
     {0,                                  NULL }
 };
 
